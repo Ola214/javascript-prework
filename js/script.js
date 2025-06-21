@@ -1,25 +1,34 @@
 var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
 var argButtonName, buttonPaper, buttonRock, buttonScissors;
 
+var roundAmounts = 0, playerScore = 0, computerScore = 0;
 
 
 /**
  * Game logic - result - who won
  */
 function displayResult(argPlayerMove, argComputerMove) {
+  roundAmounts++;
+
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
     printMessage('Wygrywasz!');
+    playerScore++;
   } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
     printMessage('Wygrywasz!');
+    playerScore++;
   } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
     printMessage('Wygrywasz!');
+    playerScore++;
   } else if (argPlayerMove == argComputerMove) {
     printMessage('Remis');
   } else {
     printMessage('Przegrywasz :(');
+    computerScore++;
   }
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+
+  printRoundsMessage(roundAmounts + ': ' + playerScore + ' - '+ computerScore);
 }
 
 
