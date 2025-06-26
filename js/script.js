@@ -81,12 +81,6 @@ buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); }
 
 
 
-// playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-// console.log('wybór ruchu gracza to: ' + playerInput);
-// playerMove = getMoveName(playerInput);
-
-
-
 
 
 
